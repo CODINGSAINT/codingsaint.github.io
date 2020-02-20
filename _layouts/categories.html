@@ -1,0 +1,77 @@
+---
+layout: default
+type: archive
+---
+
+<div class="container">
+  <div class="archive-description">
+    <h1 class="archive-title">{{ page.category }} Archive</h1>
+    {{ content }}
+  </div>
+
+
+  {% if site.categories[page.category] %}
+
+  <div class="group-year">
+    <div class="row mx-1">
+
+      {% for post in site.categories[page.category] %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% unless year == this_year %}
+      {% assign year = this_year %}
+
+      {% endunless %}
+      <!-- Card -->
+      <!-- Grid column -->
+      <div class="col-md-6">
+
+        <div class="card">
+
+          <!-- Card image -->
+          <div class="view overlay">
+           
+{% if post.image%}
+<img class="card-img-top" src="{{post.image }}" alt="Card image cap">
+{% else %}
+<img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+            
+{% endif %} 
+ <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body">
+
+            <!-- Title -->
+            <h4 class="card-title"> {{ post.title | escape }}</h4>
+            <span class="text-muted">
+              {%- assign date_format = "%b %-d, %Y" -%}
+              {{ post.date | date: date_format }} | {{post.author}}
+            </span>
+            <!-- Text -->
+            <p class="card-text">
+              {{ post.excerpt |  | truncate: 150 }}
+
+            </p>
+            <!-- Button -->
+
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-rounded">
+              Read More
+            </a>
+
+          </div>
+
+        </div>
+        <!-- Card -->
+
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <p>There are no posts in this category.</p>
+  {% endif %}
+</div>

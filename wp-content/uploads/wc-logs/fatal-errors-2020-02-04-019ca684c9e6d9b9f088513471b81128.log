@@ -1,0 +1,13 @@
+2020-02-04T15:23:56+00:00 CRITICAL Uncaught Error: Class 'WPSEO_Post_Type_Sitemap_Provider' not found in /srv/htdocs/wp-content/plugins/wordpress-seo/inc/sitemaps/class-sitemaps.php:130
+Stack trace:
+#0 /wordpress/core/5.3.2/wp-includes/class-wp-hook.php(288): WPSEO_Sitemaps->init_sitemaps_providers('')
+#1 /wordpress/core/5.3.2/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 /wordpress/core/5.3.2/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /wordpress/core/5.3.2/wp-settings.php(507): do_action('after_setup_the...')
+#4 /srv/htdocs/wp-config.php(84): require_once('/wordpress/core...')
+#5 /wordpress/core/5.3.2/wp-load.php(42): require_once('/srv/htdocs/wp-...')
+#6 /wordpress/core/5.3.2/wp-blog-header.php(13): require_once('/wordpress/core...')
+#7 /wordpress/core/5.3.2/index.php(17): require('/wordpress/core...')
+#8 {main}
+  thrown in /srv/htdocs/wp-content/plugins/wordpress-seo/inc/sitemaps/class-sitemaps.php on line 130
+
