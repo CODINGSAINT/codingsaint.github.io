@@ -11,7 +11,7 @@ layout: default
   {%- endif -%}
 
 <header class="home-area overlay" id="home_page">
-        <div class="container">
+        <div >
             <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-5">
                    <figure class="mobile-image animated wow fadeInUp" data-wow-delay="0.4s">
@@ -24,7 +24,7 @@ layout: default
                     <div class="space-20"></div>
                     <div class="desc animated wow fadeInUp" data-wow-delay="0/.6s">
                         <p>Simple Short Tutorials</p>
-                        <p>I am a Passionate Java Programmer,  Microservices lover, blogger @ http://codingsaint.com  @codingsaint , online instructor. I create Simple Short Tutorials</p>
+                        <p>I am a passionate java programmer, Open Source and  Microservices lover, blogger and  online instructor. I create Simple Short Tutorials</p>
                     </div>
                     <div class="space-20"></div>
                     <a href="https://www.udemy.com/course/spring-boot-and-rest-api/?referralCode=61F8139662DFDFE6DB67" class="btn btn-default btn-rounded waves-effect waves-light animated wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Spring Boot and Microservices 90% discount on Udemy</a>
@@ -32,10 +32,107 @@ layout: default
             </div>
         </div>
     </header>
-    <!-- Home-Area-End -->
-  <section>
-    {{ content }}
-  </section>
+<div class="container">
+<!-- Courses -->
+<!-- Section: Blog v.1 -->
+<section class="coursed">
+
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold text-center my-5">My Latest Courses</h2>
+  <!-- Section description -->
+  <p class="text-center w-responsive mx-auto mb-5">
+    I have few courses on Spring Microservices and RxJava , these are crafted for developers with a promise ,Simple Short Tutorials
+  </p>
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-lg-5">
+
+      <!-- Featured image -->
+      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4" >
+        <img class="img-fluid" src="/wp-content/uploads/2019/05/Courseid_1680046_Revision_0_Designer_Simo_Tamas.jpg" alt="Sample image">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-7">
+
+      <!-- Category -->
+      <a href="#!" class="green-text">
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-leaf pr-2"></i>Spring</h6>
+      </a>
+      <!-- Post title -->
+      <h4 class="font-weight-bold mb-3"><strong>Spring Boot Microservices - Spring Cloud
+LIVE</strong></h3>
+      <!-- Excerpt -->
+      <p>
+      With 8000+ students   "Spring Boot  REST API and Microservices - Spring Cloud" is comprehensive course aimed for starting your journey towards spring boot and Microservices. Start understanding the basics of Spring boot and REST API and master Microservices which are the latest and hottest topic in market.
+
+</p>
+      <!-- Post data -->
+      <!-- Read more button -->
+      <a href="https://www.udemy.com/course/spring-boot-and-rest-api/?referralCode=61F8139662DFDFE6DB67"
+       class="btn btn-default btn-rounded waves-effect waves-light animated wow fadeInUp"
+        data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Read more on Udemy</a>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+  <hr class="course">
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-lg-7">
+
+      <!-- Category -->
+      <a href="#!" class="pink-text">
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-image pr-2"></i>RxJava</h6>
+      </a>
+      <!-- Post title -->
+      <h3 class="font-weight-bold mb-3"><strong>RxJava 2 : Reactive Programming using Java</strong></h3>
+      <!-- Excerpt -->
+      <p>Reactive programming is a paradigm which enables to program for streams of data in non blocking (asynchronous) manner. It makes the solutions such that the system reacts to the stream of events.</p>
+      <!-- Post data -->
+        <!-- Read more button -->
+      <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="https://www.udemy.com/course/rxjava_2/?referralCode=51A1A536281B9A5664DF">Read more on Udemy</a>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-lg-5">
+
+      <!-- Featured image -->
+      <div class="view overlay rounded z-depth-2">
+        <img class="img-fluid" src="/assets/images/ReactiveJava.png" alt="Reactive Java">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+  <hr class="my-5">
+
+
+</section>
+<!-- Section: Courses -->
 
   {%- if site.posts.size > 0 -%}
 
@@ -75,20 +172,13 @@ layout: default
 
 
  </div>
-
 {%- endfor -%}
 </div>
 </section>
 
-{% for category in site.categories %}
-  <h3>{{ category[0] }}</h3>
-  <ul>
-    {% for post in category[1] %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
+</div>
 </div>
