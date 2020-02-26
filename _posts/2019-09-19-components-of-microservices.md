@@ -2,7 +2,7 @@
 id: 478
 title: Components of Microservices
 date: 2019-09-19T07:04:37+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=478
 permalink: /2019/09/19/components-of-microservices/

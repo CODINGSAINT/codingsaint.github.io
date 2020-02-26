@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,7 +21,7 @@
 title: Coding Saint
 email: codingsaint@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-   We are very enthusiastic about latest and greatest in technology.We update our study materials regularly so it stays relevent.If you are bored with too much repetitive content, our courses are right for you as they are concise and with amazing quality.Always there at your service. If you have any question , we try our best to help.
+   Simple Short Tutorials
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: codingsaint

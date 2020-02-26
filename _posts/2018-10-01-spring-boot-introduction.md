@@ -2,7 +2,7 @@
 id: 77
 title: 'Spring Boot &#8211; Introduction'
 date: 2018-10-01T23:35:24+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=77
 permalink: /2018/10/01/spring-boot-introduction/

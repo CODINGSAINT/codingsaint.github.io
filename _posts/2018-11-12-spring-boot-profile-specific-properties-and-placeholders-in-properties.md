@@ -2,7 +2,7 @@
 id: 169
 title: Spring Boot :Profile Specific Properties and Placeholders in properties
 date: 2018-11-12T22:50:49+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=169
 permalink: /2018/11/12/spring-boot-profile-specific-properties-and-placeholders-in-properties/

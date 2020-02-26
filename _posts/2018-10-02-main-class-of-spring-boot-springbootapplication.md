@@ -2,7 +2,7 @@
 id: 97
 title: 'Main class of Spring Boot @SpringBootApplication'
 date: 2018-10-02T23:25:08+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=97
 permalink: /2018/10/02/main-class-of-spring-boot-springbootapplication/

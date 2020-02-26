@@ -2,7 +2,7 @@
 id: 80
 title: Developing First spring boot application
 date: 2018-10-01T23:52:12+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=80
 permalink: /2018/10/01/developing-first-spring-boot-application/
@@ -27,7 +27,7 @@ We can create a Spring Boot application in different ways.
 
 We will be using STS built in feature and will also look at Spring Initializr. In order to create first spring boot application using STS , click on File → New → Spring Starter Project.<img title="" src="https://i2.wp.com/codingsaint.com/wp-content/uploads/2018/10/null.png?resize=624%2C84&#038;ssl=1" alt="" width="624" height="84" data-recalc-dims="1" />
 
-<img title="" src="https://i2.wp.com/codingsaint.com/wp-content/uploads/2018/10/image.png?resize=329%2C428&#038;ssl=1" alt="" width="329" height="428" data-recalc-dims="1" /> 
+<img title="" src="https://i2.wp.com/codingsaint.com/wp-content/uploads/2018/10/image.png?resize=329%2C428&#038;ssl=1" alt="" width="329" height="428" data-recalc-dims="1" />
 
 It will open a popup , where default values can be modified.
 
@@ -43,7 +43,7 @@ Web is an obvious choice as we are going to learn a web based Spring Boot applic
 
 Click Finish. Now we have a sample Spring boot application ready to go.
 
-<img title="" src="https://i1.wp.com/codingsaint.com/wp-content/uploads/2018/10/image2.png?resize=324%2C342&#038;ssl=1" alt="" width="324" height="342" data-recalc-dims="1" /> 
+<img title="" src="https://i1.wp.com/codingsaint.com/wp-content/uploads/2018/10/image2.png?resize=324%2C342&#038;ssl=1" alt="" width="324" height="342" data-recalc-dims="1" />
 
 After clicking on finish , we will have project structure as shown in figure below.
 
@@ -55,7 +55,7 @@ Let’s run it and see if Spring Boot application is really this easy to start a
 
 Once you run it , you can see output as below on console ,where it does tell that application is running on port 8080.
 
-<img title="" src="https://i1.wp.com/codingsaint.com/wp-content/uploads/2018/10/null1.png?resize=624%2C104&#038;ssl=1" alt="" width="624" height="104" data-recalc-dims="1" /> 
+<img title="" src="https://i1.wp.com/codingsaint.com/wp-content/uploads/2018/10/null1.png?resize=624%2C104&#038;ssl=1" alt="" width="624" height="104" data-recalc-dims="1" />
 
 In browser open <a href="http://localhost:8080/" rel="nofollow">http://localhost:8080/</a> and verify if server is up. Following output with 404 (default 404 of Spring Boot application) tells that server is up and running and obviously we have nothing mapped to be displayed for base URL so we are seeing this 404 error page.
 

@@ -2,7 +2,7 @@
 id: 638
 title: Observable using defer
 date: 2020-01-22T21:06:50+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=638
 permalink: /2020/01/22/observable-using-defer/

@@ -2,7 +2,7 @@
 id: 218
 title: Spring Boot :Type Safe Configuration Properties
 date: 2018-11-19T00:21:44+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=218
 permalink: /2018/11/19/spring-boot-type-safe-configuration-properties/

@@ -2,7 +2,7 @@
 id: 164
 title: 'Spring Boot : Configuring Random values'
 date: 2018-10-19T00:25:41+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=164
 permalink: /2018/10/19/spring-boot-configuring-random-values/

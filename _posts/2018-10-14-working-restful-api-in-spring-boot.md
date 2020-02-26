@@ -2,7 +2,7 @@
 id: 144
 title: Working RESTful API in Spring Boot
 date: 2018-10-14T06:00:39+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=144
 permalink: /2018/10/14/working-restful-api-in-spring-boot/

@@ -2,7 +2,7 @@
 id: 166
 title: 'Spring Boot: Disabling Command Line Parameters'
 date: 2018-10-19T00:30:49+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=166
 permalink: /2018/10/19/spring-boot-disabling-command-line-parameters/

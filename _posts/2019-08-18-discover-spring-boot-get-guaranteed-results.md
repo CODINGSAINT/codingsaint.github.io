@@ -2,7 +2,7 @@
 id: 438
 title: Discover Spring Boot, Get Guaranteed Results
 date: 2019-08-18T07:00:09+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=438
 permalink: /2019/08/18/discover-spring-boot-get-guaranteed-results/

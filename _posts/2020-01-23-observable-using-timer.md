@@ -2,7 +2,7 @@
 id: 649
 title: Observable using timer
 date: 2020-01-23T13:31:11+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=649
 permalink: /2020/01/23/observable-using-timer/

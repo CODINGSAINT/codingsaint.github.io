@@ -2,7 +2,7 @@
 id: 385
 title: Advantages and Drawbacks of Microservices
 date: 2019-06-18T23:55:04+05:30
-author: Coding Saint
+author: Kumar Pallav
 excerpt: |
   Advantages of Microservices
   Improved fault tolerance

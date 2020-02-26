@@ -2,7 +2,7 @@
 id: 580
 title: 'RxJava &#8211; Reactive Revolutions'
 date: 2020-01-02T16:31:53+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=580
 permalink: /2020/01/02/rxjava-reactive-programming/

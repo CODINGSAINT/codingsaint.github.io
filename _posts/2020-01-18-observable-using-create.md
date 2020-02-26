@@ -2,7 +2,7 @@
 id: 630
 title: Observable using create
 date: 2020-01-18T00:31:40+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=630
 permalink: /2020/01/18/observable-using-create/

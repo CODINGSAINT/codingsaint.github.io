@@ -2,7 +2,7 @@
 id: 374
 title: 'Microservices &#8211; An Introduction'
 date: 2019-06-11T16:21:50+05:30
-author: Coding Saint
+author: Kumar Pallav
 excerpt: 'Microservices as certainly a buzz word all around. We have been in an era where distributed and scaleable systems have need of the hour. '
 layout: post
 guid: https://codingsaint.com/?p=374

@@ -2,7 +2,7 @@
 id: 108
 title: 'Mapping a URL request in Spring Boot : @RequestMapping'
 date: 2018-10-03T23:54:50+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=108
 permalink: /2018/10/03/mapping-a-url-request-in-spring-boot-requestmapping/

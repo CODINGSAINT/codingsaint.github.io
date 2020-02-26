@@ -2,7 +2,7 @@
 id: 172
 title: 'Spring Boot: Using YAML file inspite of Property files'
 date: 2018-11-12T06:30:23+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=172
 permalink: /2018/11/12/spring-boot-using-yaml-file-inspite-of-property-files/

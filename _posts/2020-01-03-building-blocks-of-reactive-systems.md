@@ -2,7 +2,7 @@
 id: 606
 title: Building blocks of Reactive Systems
 date: 2020-01-03T15:22:12+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=606
 permalink: /2020/01/03/building-blocks-of-reactive-systems/

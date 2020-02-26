@@ -2,7 +2,7 @@
 id: 146
 title: 'Configuration and Properties : Spring Boot : Part 1'
 date: 2018-10-15T06:00:14+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=146
 permalink: /2018/10/15/configuration-and-properties-spring-boot-part-1/

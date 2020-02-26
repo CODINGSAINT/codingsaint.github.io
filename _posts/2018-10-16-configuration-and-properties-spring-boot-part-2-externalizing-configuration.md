@@ -2,7 +2,7 @@
 id: 150
 title: 'Configuration and Properties : Spring Boot : Part 2 &#8211; Externalizing Configuration'
 date: 2018-10-16T06:00:27+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=150
 permalink: /2018/10/16/configuration-and-properties-spring-boot-part-2-externalizing-configuration/

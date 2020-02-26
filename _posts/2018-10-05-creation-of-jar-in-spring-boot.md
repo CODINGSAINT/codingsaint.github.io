@@ -2,7 +2,7 @@
 id: 119
 title: Creation of jar in Spring Boot
 date: 2018-10-05T23:16:11+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: http://codingsaint.com/?p=119
 permalink: /2018/10/05/creation-of-jar-in-spring-boot/

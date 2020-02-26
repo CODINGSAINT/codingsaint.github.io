@@ -2,7 +2,7 @@
 id: 596
 title: Reactive Manifesto
 date: 2020-01-03T13:05:39+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=596
 permalink: /2020/01/03/reactive-manifesto/

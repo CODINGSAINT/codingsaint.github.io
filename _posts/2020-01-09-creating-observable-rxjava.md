@@ -2,7 +2,7 @@
 id: 614
 title: 'Creating Observable RxJava'
 date: 2020-01-09T07:50:25+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=614
 permalink: /2020/01/09/creating-observable-rxjava/

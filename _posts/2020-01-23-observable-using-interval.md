@@ -2,7 +2,7 @@
 id: 643
 title: Observable using interval
 date: 2020-01-23T13:21:58+05:30
-author: Coding Saint
+author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=643
 permalink: /2020/01/23/observable-using-interval/
