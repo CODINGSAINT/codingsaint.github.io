@@ -136,3 +136,7 @@ body {
     margin-left: 0;
     margin-bottom: -50px;
 }
+#toc{
+ font-size: 90%;
+ margin-top: 30px;
+ }

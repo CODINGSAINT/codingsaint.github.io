@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/js/wow.min.js" />
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/js/scrollUp.min.js" />
 
-
+<script src="/assets/js/wow.min.js"/>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140402791-1"></script>
 <script>
@@ -41,8 +41,30 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
-script>
+<script src="https://www.cssscript.com/demo/generating-a-table-of-contents-with-pure-javascript-toc/src/toc.js"></script>
+
+<script>
               new WOW().init();
+              var tocElem = document.getElementById('toc');
+var toc = initTOC({
+  // headers selector
+  selector:'h1, h2, h3, h4, h5, h6',
+
+  // selector to specify elements search scope
+  scope:'#guide',
+
+  // whether to overwrite existed headers' id
+  overwrite:false,
+
+  // string to prepend to id/href property
+  prefix:'toc'
+
+});
+
+ tocElem.appendChild(toc);
+
+
+
               </script>
  </body>
 </html>

@@ -1,13 +1,15 @@
 ---
-layout: page
+layout: guides
 title:  "Quarkus IO"
 date:   2020-02-17 20:39:11 +0530
 categories: [quarkus,java]
 permalink: /course/quarkus-io/
+image: /assets/images/Quarkus_Intoduction.jpg
 ---
 
 
-
+Quarkus
+===================
 Quarkus IO is a microservices based java framework. According to QuarkusIO website , Quarkus is "_A Kubernetes Native Java stack tailored for OpenJDK HotSpot & GraalVM, crafted from the best of breed Java libraries and standards_". This course will talks about creating microservices based on Quarkus. We will be going through
 
 1.  Installing required software for understanding full features of Quarkus
@@ -36,13 +38,13 @@ To install JDK go to official website and download the latest version for your o
 1.  Open terminal
 2.  write following commands
 
-    
+
                 sudo add-apt-repository ppa:openjdk-r/ppa
                 sudo apt update
                 sudo apt install open-jdk-8-jdk
                 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
                 export PATH=$PATH:$JAVA_HOME/bin
-            
+
 
 Check the installed version
 
@@ -61,35 +63,35 @@ GraalVM
 
 GraalVM is a virtual machine by oracle which enables user to create native images. Native images are faster and has lower memory footprint. GraamVM enable local executables and the binary created by it is independent of JVM it runs faster. It must be noticed that while creating native builds GraalVM do analyse all the classes your code will use at its entire life cycle and the compiles to byte code , the entire process is a bit slow. Run below commands to install GraalVM on linux (ubuntu)
 
-    
+
                 sudo apt-get install build-essential libz-dev zlib1g-dev
-            
+
 
 You can install GraamVM community edition or can download enterprise edition from oracle website. If you have a enterprise edition tar file downloaded
 
-    
+
                 tar -xvf graalvm-ee-java11-linux-amd64-19.3.1.tar.gz
                 export GRAALVM_HOME=/home/coding/Documents/Softwares/graalvm-ee-java11-19.3.1/
-            
+
 
 If you have enterprise edition installed download native jar and run following command
 
-    
+
                 ${GRAALVM_HOME}/bin/gu install native-image --filr native-image-installable-svm-svmee-java11-linux-amd64-19.3.1.jar
-            
+
 
 Docker
 ------
 
 To install docker at Ubuntu we can use following commands
 
-    
+
              sudo apt install apt-transport-https ca-certificates curl software-properties-common
              curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
              sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"
              sudo apt update
              sudo apt install docker-ce
-            
+
 
 For detailed documentation of installation on any platform https://docs.docker.com/
 
@@ -103,7 +105,7 @@ Creating user-service using maven
 
 Open terminal and type following command.
 
-    
+
     		mvn io.quarkus:quarkus-maven-plugin:1.2.0.Final:create \
                 -DprojectGroupId=com.codingsaint.learning.quarkus \
                 -DprojectArtifactId=user-service \
@@ -112,19 +114,19 @@ Open terminal and type following command.
 
 > While the above command will only a bare project which you can run using simple maven command. We will be adding the dependencies later , just to understand how can we use quarkus maven extension to add dependencies ,Obviously both steps can be combined together.
 
-    
+
              cd user-service
              mvn quarkus:dev
-            
+
 
 Running application in dev mode
 -------------------------------
 
 The command to run in dev mode is
 
-    
+
              mvn quarkus:dev
-            
+
 
 This will start the server in dev mode.In dev mode if you edit the code and do a change it will stop quarkus (not JVM), recompile and start quarkus . This works as live reload and is very helpful in dev mode
 
@@ -152,82 +154,82 @@ Creating User entity
 --------------------
 
     package com.codingsaint.learning.quarkus;
-    
+
     import io.quarkus.mongodb.panache.MongoEntity;
     import io.quarkus.mongodb.panache.PanacheMongoEntity;
     import org.bson.codecs.pojo.annotations.BsonId;
     import org.bson.codecs.pojo.annotations.BsonProperty;
-    
+
     import javax.validation.constraints.NotNull;
     import java.time.LocalDate;
-    
+
     @MongoEntity
     public class User extends PanacheMongoEntity {
-    
+
         private String userId;
-    
+
         @NotNull(message = "First Name is required")
         private String firstName;
-    
+
         private String lastName;
-    
+
         @BsonProperty("dob")
         @NotNull(message = "Date of Birth is required")
         private LocalDate dateOfBirth;
-    
+
         @NotNull(message = "Email is required")
         private String email;
-    
+
         private Boolean active;
-    
+
         public String getFirstName() {
             return firstName;
         }
-    
+
         public void setFirstName(String firstName) {
             this.firstName = firstName;
         }
-    
+
         public String getLastName() {
             return lastName;
         }
-    
+
         public void setLastName(String lastName) {
             this.lastName = lastName;
         }
-    
+
         public String getUserId() {
             return userId;
         }
-    
+
         public void setUserId(String userId) {
             this.userId = userId;
         }
-    
+
         public LocalDate getDateOfBirth() {
             return dateOfBirth;
         }
-    
+
         public void setDateOfBirth(LocalDate dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
         }
-    
+
         public String getEmail() {
             return email;
         }
-    
+
         public void setEmail(String email) {
             this.email = email;
         }
-    
+
         public Boolean getActive() {
             return active;
         }
-    
+
         public void setActive(Boolean active) {
             this.active = active;
         }
-    
+
         public static User findByUserId(String userId) {
             return find("userId", userId).firstResult();
         }
@@ -235,23 +237,23 @@ Creating User entity
 
 Adding UserResource
 
-    
+
                     package com.codingsaint.learning.quarkus;
-    
+
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
-    
+
     import javax.validation.Valid;
     import javax.ws.rs.*;
     import javax.ws.rs.core.MediaType;
     import javax.ws.rs.core.Response;
     import java.util.UUID;
-    
+
     @Path("/users")
     public class UserResource {
-    
+
         private static final Logger LOGGER = LoggerFactory.getLogger(UserResource.class);
-    
+
         /**
          * Get all of the users
          *
@@ -262,7 +264,7 @@ Adding UserResource
         public Response users() {
             return Response.ok(User.listAll()).build();
         }
-    
+
         /**
          * Create the user
          *
@@ -274,11 +276,11 @@ Adding UserResource
         @Consumes(MediaType.APPLICATION_JSON)
         public Response users(final @Valid User user) {
             user.setUserId(UUID.randomUUID().toString());
-            user.setActive(true); 
+            user.setActive(true);
             User.persist(user);
             return Response.ok().build();
         }
-    
+
         /**
          * Update the user
          *
@@ -292,7 +294,7 @@ Adding UserResource
             user.update();
             return Response.ok(user).build();
         }
-    
+
         /**
          * retrieve user based on userId
          *
@@ -308,7 +310,7 @@ Adding UserResource
             LOGGER.info(" finding user based on userId {}", userId);
             return Response.ok(user).build();
         }
-    
+
         /**
          * delete user based on userId
          * @param userId
@@ -321,27 +323,27 @@ Adding UserResource
             User.delete("userId",userId);
             return Response.noContent().build();
         }
-    
+
     }
 
-            
+
 
 Adding application properties
 -----------------------------
 
-    
+
                 quarkus.mongodb.connection-string = mongodb://localhost:27017
                 quarkus.mongodb.database=todo-users
-            
+
 
 Running the server
 ------------------
 
 Run the server using below command
 
-    
+
                 mvn quarkus:dev
-            
+
 
 Add a user
 ----------
@@ -364,28 +366,28 @@ Retrieve all users
 
 Use a get request http://localhost:8080/user/all or do a curl as below
 
-    
+
                 curl -X GET \
                 http://localhost:8080/user/all \
-            
+
 
 You will get a response like
 
-    
+
                 [{
-    
+
                 "id": "5e430af58cd12948d22faa9a",
-    
+
                 "active": true,
-    
+
                 "dateOfBirth": "1987-08-05",
-    
+
                 "email": "codingsaint@gmail.com",
-    
+
                 "firstName": "Kumar",
-    
+
                 "lastName": "Pallav",
-    
+
                 "userId": "10905021-e7c5-43e2-a29e-8a42f69d4fb2"
-    
+
                 }]

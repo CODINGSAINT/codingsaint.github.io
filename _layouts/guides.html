@@ -35,7 +35,6 @@ bio: I am a Passionate Java Programmer, Microservices lover, blogger @ http://co
                 </div>
             </div>
     </p>
-    <h1>{{ page.title | escape }}</h1>
     <p class="text-muted">
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {%- assign date_format = "%b %-d, %Y" -%}
@@ -46,8 +45,18 @@ bio: I am a Passionate Java Programmer, Microservices lover, blogger @ http://co
       {%- endif -%}
     </p>
   </header>
-  <section>
+  <div class='row' >
+        <div class='col-3 d-sm-block'>
+          <div class="toc-header">
+            <h3>Table of content</h3>
+          </div>
+            <div id="toc"></div>
+        </div>
+        <div class='col-9' >
+
+  <section id='guide'>
     {{ content }}
   </section>
+  </div>
 </div>
 </article>
