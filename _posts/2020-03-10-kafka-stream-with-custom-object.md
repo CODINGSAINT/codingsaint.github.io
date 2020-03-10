@@ -21,12 +21,12 @@ series:
 
 Kafka is most sought after event system today. In this series we will look at Kafka event messaging and streaming.    
 
-# Kafka Stream with Custom Objects
+#### Kafka Stream with Custom Objects
 
 
 Github Repository link : https://github.com/CODINGSAINT/kafka-stream-spring
 
-## What will we be creating
+##### What will we be creating
 
  We will create a streaming application using Spring and kafka streams.
  We will have a continuously coming stream of famous quotes which will be continously produced at `quote` topic.  Every quote can be tagged with multiple categories i.e. `business,education,faith,famous-quotes,friendship,future,happiness,inspirational,life,love,nature,politics,proverb,religion,science,success,technology` .
@@ -38,12 +38,14 @@ Listener will keep track of all the quotes which are streamed to these topics.
 
 .    
 
-## Installing kafka
- ### Download
+### Installing kafka
+
+#### Download
+
  To start kafka we require zookeeper , on kafka website we have different versions you can get the latest stable vesion from [Kafka download page](https://kafka.apache.org/downloads) Say you have downloaded  [**kafka_2.11-2.4.0.tgz**](http://mirrors.estointernet.in/apache/kafka/2.4.0/kafka_2.11-2.4.0.tgz)    
 
 `` wget http://mirrors.estointernet.in/apache/kafka/2.4.0/kafka_2.11-2.4.0.tgz ``
-### Unzip
+#### Unzip
 Use below command to unzip the downloaded file `` tar xzf kafka_2.11-2.4.0.tgz ``
  ### Move to user directory Move content to user directory    
 `` mv kafka_2.11-2.4.0/* /usr/local/kafka ``
@@ -51,15 +53,15 @@ Use below command to unzip the downloaded file `` tar xzf kafka_2.11-2.4.0.tgz `
   Go to kafka directory and run    
 `` cd /usr/local/kafka bin/zookeeper-server-start.sh config/zookeeper.properties `` ### Run Kafka Server Use below command to run kafka server    
 `` bin/kafka-server-start.sh config/server.properties `` You will see logs confirming the kafka is up an running.    
-### Test kafka installation
- #### Create a topic
+#### Test kafka installation
+ ##### Create a topic
   ``    
  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka-test-topic    
  ``  
-#### Verify if topic got created    
+##### Verify if topic got created    
 
  bin/kafka-topics.sh --list --zookeeper localhost:2181 kafka-test-topic
- #### Send messages to topic    
+ ##### Send messages to topic    
 Use below command to activate message terminal to kafka-test-topic. Below command will activate message sending to a topic , key in some interesting messages. Lets call it producer window    
 
 
@@ -67,14 +69,14 @@ Use below command to activate message terminal to kafka-test-topic. Below comman
     bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka-test-topic >Welcome to Kafka
 
 
-#### Consume the topic Open another terminal to consume messages    
+##### Consume the topic Open another terminal to consume messages    
 
      bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka-test-topic --from-beginning    
 
 Now whatever you key in to producer window will be consumed to consumer window    
-### Other ways to install kafka
+##### Other ways to install kafka
  There could be many other ways to install and run like using apt installer on Ubuntu , using a docker image etc. The above one is a generic setup .    
-### Create Topics for for app  
+#### Create Topics for for app  
 
     bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic quotes  
     bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic business  
@@ -100,7 +102,7 @@ Now whatever you key in to producer window will be consumed to consumer window
 
 
 
-## Creating Spring Boot Kafka Stream project
+#### Creating Spring Boot Kafka Stream project
 We will create project using https://start.spring.io .
 Go to website and dependencies
 
@@ -175,7 +177,7 @@ We will create  QuoteSerializer , QuoteDeserializer and QuoteSerde which will ha
         }
     }
 
-#### QuoteDeserializer
+##### QuoteDeserializer
 
     public class QuoteDeserializer implements Deserializer<Quote> {
 
@@ -193,7 +195,7 @@ We will create  QuoteSerializer , QuoteDeserializer and QuoteSerde which will ha
 
     }
 
-#### QuoteSerde
+##### QuoteSerde
 
     public class QuoteSerde implements Serde<Quote> {
         public QuoteSerde() {
