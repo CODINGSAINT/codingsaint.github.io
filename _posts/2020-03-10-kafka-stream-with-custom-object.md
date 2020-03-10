@@ -7,6 +7,9 @@ permalink: /2020/03/10/kafka-stream-with-custom-object/
 image: /assets/images/Stream.jpg
 categories:
   - Java
+  - Spring
+  - Kafka
+  - Kafka Stream
 tags:
   - Java
   - Reactive
