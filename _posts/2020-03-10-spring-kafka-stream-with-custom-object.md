@@ -3,7 +3,7 @@ title: Kafka Stream with Custom Objects
 date: 2020-03-10T13:31:11+05:30
 author: Kumar Pallav
 layout: post
-permalink: /2020/03/10/kafka-stream-with-custom-object/
+permalink: /2020/03/10/spring-kafka-stream-with-custom-object/
 image: /assets/images/Stream.jpg
 categories:
   - Java
