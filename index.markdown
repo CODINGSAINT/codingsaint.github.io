@@ -1,6 +1,5 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: Simple, short tutorials. Deeper understanding.
+description: Learn Java, Spring Boot, microservices and AI with Coding Saint. Explore practical courses and KB, our free learning and practice product.
 ---
