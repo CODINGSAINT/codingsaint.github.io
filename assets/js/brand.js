@@ -13,7 +13,7 @@
   button.addEventListener('click', () => {
     const next = current() === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    try { localStorage.setItem('codingsaint-theme', next); } catch (e) {}
+    try { localStorage.setItem('digitalyogi-theme', next); } catch (e) {}
     update();
   });
   system.addEventListener('change', update);

@@ -1,6 +1,6 @@
-# Coding Saint website
+# DigitalYogi website
 
-Jekyll website served by GitHub Pages at https://www.codingsaint.com.
+Jekyll website served by GitHub Pages at https://digitalyogi.tech.
 
 ## Brand and content
 
