@@ -21,7 +21,7 @@
 title: DigitalYogi
 email: codingsaint@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-   Simple, short tutorials in Java, Spring Boot, microservices and AI. Learn with practical courses and KB by DigitalYogi.
+   Simple, short tutorials in Java, Spring Boot, microservices and AI. Courses on DigitalYogi Learn and practice in KB.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://digitalyogi.tech" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: digitalyogi_labs
