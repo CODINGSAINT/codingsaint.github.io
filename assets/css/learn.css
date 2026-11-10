@@ -1,1 +1,2 @@
 .facts{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:26px 0 0}.facts li{border:1px solid var(--line);border-radius:30px;padding:4px 12px;color:var(--muted);font-size:10px}.ai-art{background:#12324a}.soon-art{background:#2a2f3a}.ai-art .architecture,.soon-art .architecture{gap:8px;flex-wrap:wrap}.ai-art .architecture>span,.soon-art .architecture>span{padding:9px 10px;font-size:10px}#learn .product-grid{align-items:start}
+.legal h2{margin:34px 0 8px;font-size:22px}.legal p,.legal li{max-width:760px;line-height:1.7}.legal ul{padding-left:20px}
