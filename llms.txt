@@ -1,0 +1,27 @@
+# DigitalYogi
+
+> DigitalYogi teaches working backend developers: Java, Spring Boot, microservices, system design and AI system design, in short, practical videos and courses. Run by DigitalYogi Lab (OPC) Private Limited, Bengaluru, India. Formerly Coding Saint.
+
+AI agents: the live course catalog is available over MCP (Streamable HTTP, no auth) at https://learn.digitalyogi.tech/mcp
+Tools: list_courses, get_course, get_kb_pro, search_catalog, list_free_resources. Up-to-date catalog in plain text: https://learn.digitalyogi.tech/llms.txt
+
+## Learn (courses)
+
+- [DigitalYogi Learn](https://learn.digitalyogi.tech/): video courses for backend developers. Lesson 1 of every course is a free preview.
+- [AI System Design in 60 Minutes](https://learn.digitalyogi.tech/courses/ai-system-design): free course. Eight short lessons on one project: request path, RAG, caching and cost, agents, guardrails, evaluation and monitoring.
+
+## KB Pro (interview practice)
+
+- [KB Pro](https://learn.digitalyogi.tech/kb-pro): practise system design, LLD and DSA by writing your own answer; AI grades it and shows a worked senior-level answer. One-time payment in INR, 7-day full refund.
+- [KB free preview](https://kb.digitalyogi.tech/): try KB with Google sign-in.
+
+## Free resources
+
+- [12 System Design Cheat Sheets](https://learn.digitalyogi.tech/system-design-cheat-sheets): free PDF on caching, databases, Kafka vs RabbitMQ, rate limiting, sharding and more.
+- [YouTube @digitalyogi_labs](https://www.youtube.com/@digitalyogi_labs): short videos on Java, Spring Boot, system design and AI.
+
+## Optional
+
+- [Spring Boot, REST API & Microservices (Udemy)](https://www.udemy.com/course/spring-boot-and-rest-api/): earlier course, 15,000+ students across Udemy courses.
+- [RxJava 2: Reactive Programming using Java (Udemy)](https://www.udemy.com/course/rxjava_2/)
+- [Privacy](https://digitalyogi.tech/privacy) · [Terms](https://digitalyogi.tech/terms) · Contact: hello@digitalyogi.tech
