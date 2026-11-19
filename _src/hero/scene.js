@@ -323,8 +323,14 @@ export function initHero({ canvas, hero, labelsRoot, onReady }) {
       group.position.set(0, (1 - (2 * top) / height) * halfH, 0)
     } else {
       // Fit the diagram into the space right of the text column.
-      const copy = hero.querySelector('.hero-copy')
-      const right = copy ? copy.getBoundingClientRect().right - rect.left : width * 0.5
+      // Measure the actual text (not its box) so the diagram gets every pixel it can.
+      const range = document.createRange()
+      let right = width * 0.5
+      hero.querySelectorAll('.hero-copy h1, .hero-copy .lede, .hero-copy .actions').forEach((el, idx) => {
+        range.selectNodeContents(el)
+        const r = range.getBoundingClientRect().right - rect.left
+        right = idx === 0 ? r : Math.max(right, r)
+      })
       const left = ((right / width) * 2 - 1) * halfW + 0.35
       const edge = halfW - 0.3
       const span = Math.max(2.6, edge - left)

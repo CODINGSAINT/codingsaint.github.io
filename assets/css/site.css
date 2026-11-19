@@ -1489,3 +1489,7 @@ details[open] .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
 .stats p .text-link { font-size: 13px; color: var(--ink); }
 /* Pages without a dark hero (privacy, terms) get a solid header. */
 body:not(:has(.hero, .page-hero)) .site-header { background: var(--ink); }
+/* Longer category headline: keep it to two lines on desktop. */
+.hero .hero-copy { max-width: 780px; }
+.hero h1 { max-width: 20ch; font-size: clamp(2.4rem, 4.3vw, 4.05rem); }
+@media (max-width: 640px) { .hero h1 { font-size: clamp(2.1rem, 9.4vw, 2.7rem); } }

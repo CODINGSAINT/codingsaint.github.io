@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Java, Spring Boot & AI System Design Tutorials
-seo_title: Java, Spring Boot & AI System Design Tutorials | DigitalYogi
-description: Short, visual tutorials in Java, Spring Boot and AI system design. Start the free AI System Design in 60 Minutes course, then practise what you learn in KB.
+title: Java, Spring Boot, System Design, LLD & AI Tutorials
+seo_title: Java, Spring Boot, System Design, LLD & AI | DigitalYogi
+description: Short, visual lessons in Java, Spring Boot, system design, low-level design and AI. Start the free AI System Design course, then practise in KB.
 ---
