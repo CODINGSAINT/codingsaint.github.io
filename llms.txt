@@ -1,6 +1,6 @@
 # DigitalYogi
 
-> DigitalYogi teaches working backend developers: Java, Spring Boot, microservices, system design and AI system design, in short, practical videos and courses. Run by DigitalYogi Lab (OPC) Private Limited, Bengaluru, India. Formerly Coding Saint.
+> DigitalYogi teaches working backend developers: Java, Spring Boot, microservices, system design and AI system design, in short, practical videos and courses. Run by DigitalYogi Lab (OPC) Private Limited, Bengaluru, India.
 
 AI agents: the live course catalog is available over MCP (Streamable HTTP, no auth) at https://learn.digitalyogi.tech/mcp
 Tools: list_courses, get_course, get_kb_pro, search_catalog, list_free_resources. Up-to-date catalog in plain text: https://learn.digitalyogi.tech/llms.txt
@@ -15,10 +15,17 @@ Tools: list_courses, get_course, get_kb_pro, search_catalog, list_free_resources
 - [KB Pro](https://learn.digitalyogi.tech/kb-pro): practise system design, LLD and DSA by writing your own answer; AI grades it and shows a worked senior-level answer. One-time payment in INR, 7-day full refund.
 - [KB free preview](https://kb.digitalyogi.tech/): try KB with Google sign-in.
 
+## On this site
+
+- [Courses](https://digitalyogi.tech/courses/): every DigitalYogi course, free and paid.
+- [KB practice](https://digitalyogi.tech/kb/): how KB system design, LLD and DSA practice works.
+- [About](https://digitalyogi.tech/about/): what DigitalYogi is and how lessons are built.
+
 ## Free resources
 
 - [12 System Design Cheat Sheets](https://learn.digitalyogi.tech/system-design-cheat-sheets): free PDF on caching, databases, Kafka vs RabbitMQ, rate limiting, sharding and more.
 - [YouTube @digitalyogi_labs](https://www.youtube.com/@digitalyogi_labs): short videos on Java, Spring Boot, system design and AI.
+- Instagram [@digitalyogi_labs](https://www.instagram.com/digitalyogi_labs) · X [@digitalyogilabs](https://x.com/digitalyogilabs)
 
 ## Optional
 

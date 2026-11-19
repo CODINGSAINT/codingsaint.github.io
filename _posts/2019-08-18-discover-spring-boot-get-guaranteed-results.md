@@ -6,6 +6,7 @@ author: Kumar Pallav
 layout: post
 guid: https://codingsaint.com/?p=438
 permalink: /2019/08/18/discover-spring-boot-get-guaranteed-results/
+sitemap: false
 categories:
   - Uncategorised
 ---

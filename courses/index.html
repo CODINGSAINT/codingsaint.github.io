@@ -1,7 +1,68 @@
 ---
 layout: brand
-title: Courses
-description: DigitalYogi courses in AI system design, Spring AI, Spring Boot, microservices and reactive Java.
+title: Java, Spring Boot & AI Courses
+seo_title: Java, Spring Boot & AI System Design Courses | DigitalYogi
+description: Courses in AI system design, Spring AI, Spring Boot, REST APIs, microservices and reactive Java. Start with the free AI System Design in 60 Minutes course.
+crumb: Courses
 ---
-<section class="wrap section"><p class="eyebrow">LEARN WITH DIGITALYOGI</p><h1 class="page-title">Build understanding.<br>Then build something.</h1><p class="lede">Short, visual courses in AI, system design and Java backend development. New courses live on DigitalYogi Learn; start with the free AI System Design course.</p>{% include course-cards.html %}</section>
-<section class="watch-section"><div class="wrap watch"><div><p class="eyebrow">PUT THE IDEAS TO WORK</p><h2>Your next step: practise in KB</h2><p>Explore system design, AI and DSA alongside your course learning.</p></div><a class="button light-button" href="https://kb.digitalyogi.tech/">Explore KB ↗</a></div></section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "DigitalYogi courses",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "item": { "@type": "Course", "name": "AI System Design in 60 Minutes", "description": "Eight short lessons on one project: request path, RAG, caching and cost, agents, guardrails, evaluation and monitoring.", "url": "https://learn.digitalyogi.tech/courses/ai-system-design", "provider": { "@type": "Organization", "name": "DigitalYogi", "sameAs": "https://digitalyogi.tech/" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "category": "Free" }, "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT1H" } } },
+    { "@type": "ListItem", "position": 2, "item": { "@type": "Course", "name": "Spring Boot, REST API & Microservices", "description": "Build a foundation in Spring Boot and REST APIs, then explore microservices with Spring Cloud.", "url": "https://www.udemy.com/course/spring-boot-and-rest-api/", "provider": { "@type": "Organization", "name": "DigitalYogi", "sameAs": "https://digitalyogi.tech/" } } },
+    { "@type": "ListItem", "position": 3, "item": { "@type": "Course", "name": "RxJava 2: Reactive Programming using Java", "description": "Understand streams of data and build asynchronous, non-blocking solutions with reactive Java.", "url": "https://www.udemy.com/course/rxjava_2/", "provider": { "@type": "Organization", "name": "DigitalYogi", "sameAs": "https://digitalyogi.tech/" } } }
+  ]
+}
+</script>
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="wrap">
+    <!--crumbs-->
+    <p class="eyebrow">Learn with DigitalYogi</p>
+    <h1 class="page-title" id="page-title">Java, Spring Boot &amp; AI courses. <em>Build understanding, then build something.</em></h1>
+    <p class="lede">Short, visual courses in AI system design and Java backend development. New courses live on DigitalYogi Learn — start with the free one, then go deeper.</p>
+    <div class="actions">
+      <a class="button" href="https://learn.digitalyogi.tech/courses/ai-system-design">Start the free course <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="#all-courses">See every course <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section courses" id="all-courses" aria-labelledby="all-title" style="padding-top: clamp(64px, 8vw, 112px)">
+  <div class="wrap">
+    <div class="section-heading split" data-reveal>
+      <div>
+        <p class="eyebrow">Every course</p>
+        <h2 id="all-title">Pick the idea you <em>need next.</em></h2>
+      </div>
+      <p class="section-lede">Earlier courses are hosted on Udemy; current pricing and availability are shown on each course page. More than 15,000 developers have learned with them.</p>
+    </div>
+    {% include course-cards.html %}
+  </div>
+</section>
+
+<section class="section way" aria-labelledby="path-title">
+  <div class="wrap two-col">
+    <div class="section-heading" data-reveal>
+      <p class="eyebrow">Not sure where to start?</p>
+      <h2 id="path-title">A simple <em>path.</em></h2>
+    </div>
+    <ol class="method" style="grid-template-columns: minmax(0, 1fr)" data-reveal-children>
+      <li><span class="mono">If you build AI features</span><h3>AI System Design in 60 Minutes</h3><p>One project, eight decisions. Learn where time limits, retrieval, caching and guardrails belong before you write production code. Free.</p></li>
+      <li><span class="mono">If you are new to Spring</span><h3>Spring Boot, REST API &amp; Microservices</h3><p>Start from an empty project and finish with connected services. The foundation the AI courses build on.</p></li>
+      <li><span class="mono">If you work with async code</span><h3>RxJava 2: Reactive Programming</h3><p>Think in streams: Observables, operators, schedulers and back-pressure, explained with small examples.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section cta-band" aria-labelledby="practise-title">
+  <div class="wrap">
+    <h2 id="practise-title">Then put it to work: <em>practise in KB.</em></h2>
+    <div class="actions">
+      <a class="button" href="/kb/">How KB works <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="https://kb.digitalyogi.tech/">Open KB <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
