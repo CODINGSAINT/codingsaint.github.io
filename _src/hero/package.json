@@ -1,0 +1,13 @@
+{
+  "name": "digitalyogi-hero",
+  "private": true,
+  "type": "module",
+  "description": "Builds the Three.js hero to /assets/js/hero.js",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "three": "^0.181.0"
+  }
+}

@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign pages = "/,/courses/,/kb/,/about/,/privacy/,/terms/" | split: "," %}
+{%- for path in pages %}
+  <url><loc>{{ path | absolute_url }}</loc><lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod></url>
+{%- endfor %}
+{%- for post in site.posts %}{%- if post.sitemap == false %}{%- continue %}{%- endif %}
+  <url><loc>{{ post.url | absolute_url }}</loc><lastmod>{{ post.last_modified_at | default: post.date | date: '%Y-%m-%d' }}</lastmod></url>
+{%- endfor %}
+</urlset>

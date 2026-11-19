@@ -1,5 +1,6 @@
 ---
 layout: home
-title: Simple, short tutorials. Deeper understanding.
-description: Learn AI system design, Java, Spring Boot and microservices with DigitalYogi. Start the free AI System Design course on DigitalYogi Learn and practise in KB.
+title: System Design, LLD, DSA & AI for Java Developers
+seo_title: System Design, LLD, DSA & AI for Java Developers | DigitalYogi
+description: System design, LLD, DSA and AI, explained for Java and Spring Boot developers. Start the free AI System Design course, then practise interview problems in KB.
 ---

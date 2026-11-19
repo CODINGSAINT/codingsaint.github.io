@@ -1,0 +1,20 @@
+{%- assign nav = "/courses/|Courses,/kb/|Practice,/about/|About" | split: "," -%}
+{%- capture nav_links -%}
+{%- assign here = page.url | replace: 'index.html', '' -%}
+{%- for item in nav -%}{%- assign parts = item | split: "|" -%}<a href="{{ parts[0] }}"{% if here == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>{%- endfor -%}
+{%- endcapture -%}
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="/">digital<strong>yog<span class="dy-i">ı<span class="dy-dot" aria-hidden="true"></span></span></strong><span class="sr-only"> home</span></a>
+    <nav class="site-nav" aria-label="Main navigation">{{ nav_links }}</nav>
+    <div class="header-actions">
+      <a class="button small" href="https://learn.digitalyogi.tech/courses/ai-system-design">Start free <span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    {{ nav_links }}
+    <a class="button" href="https://learn.digitalyogi.tech/courses/ai-system-design">Start the free course <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
