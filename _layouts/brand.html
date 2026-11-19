@@ -15,7 +15,10 @@
   <link rel="canonical" href="{{ canonical }}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   {%- endif %}
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <script>try{var t=localStorage.getItem('digitalyogi-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DigitalYogi">
   <meta property="og:locale" content="en_US">
@@ -42,7 +45,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/fonts/manrope-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
   {%- if page.crumb %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{ '/' | absolute_url }}"},{"@type":"ListItem","position":2,"name":{{ page.crumb | jsonify }},"item":"{{ canonical }}"}]}</script>

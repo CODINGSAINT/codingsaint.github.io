@@ -17,6 +17,11 @@ Every page uses `_layouts/brand.html` (head metadata, header, footer). Front mat
 `seo_title` (full `<title>`), `description`, `crumb` (adds a breadcrumb + BreadcrumbList),
 `robots` (e.g. `noindex, follow`), `og_image`. Page-specific JSON-LD sits at the top of each page.
 
+Design system: the same tokens as Learn and KB (`--ground`, `--raised`, `--ink`, `--muted`, `--line`,
+indigo `#1f1a4d` fields, Manrope + JetBrains Mono) with light/dark themes. The header toggle saves
+the choice under `digitalyogi-theme`, the same key the other DigitalYogi sites use. The `#c81e3a`
+bindu is only for the logo. Practice tracks use KB's track colours (LLD, HLD, AI, DSA).
+
 Header/footer: `_includes/site-header.html`, `_includes/site-footer.html`.
 Styles: `assets/css/site.css`. Script: `assets/js/site.js` (menu, reveals, lazy hero).
 Fonts are self-hosted in `assets/fonts/`.
@@ -27,7 +32,7 @@ not linked from the new navigation yet.
 ## The Three.js hero
 
 `_src/hero/scene.js` → built to `assets/js/hero.js` (tree-shaken three.js, ~130 KB gzipped).
-A particle cloud assembles into the free course's architecture (API → Retrieval → Model →
+Inside the brand's indigo hero panel, a particle cloud assembles into the free course's architecture (API → Retrieval → Model →
 Guardrails), a request pulse runs along it, particles part around the pointer, and scrolling
 lets it drift apart. It loads during idle time after the text has painted, pauses off-screen,
 respects `prefers-reduced-motion` and Save-Data, and falls back to a static CSS diagram.

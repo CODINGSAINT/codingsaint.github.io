@@ -56,14 +56,8 @@ layout: brand
 }
 </script>
 
-<!-- 1. Hero: noise → clarity -->
+<!-- 1. Hero: the scene lives in the brand's indigo panel -->
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-scene" aria-hidden="true">
-    <canvas id="hero-scene"></canvas>
-    <div class="scene-labels"></div>
-    <div class="scene-fallback"><span>API</span><i>→</i><span>Retrieval</span><i>→</i><span>Model</span><i>→</i><span>Guardrails</span></div>
-  </div>
-
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <p class="eyebrow reveal">For the developer who wants to understand</p>
@@ -80,9 +74,17 @@ layout: brand
         <li><strong>15,000+</strong> students taught</li>
       </ul>
     </div>
-  </div>
 
-  <a class="scene-cta" href="https://learn.digitalyogi.tech/courses/ai-system-design/why-ai-breaks-design"><span class="live" aria-hidden="true"></span> Lesson 1: follow one request through an AI system</a>
+    <div class="hero-visual reveal">
+      <div class="visual-heading"><span class="mono">AI system design · one request</span><span class="status"><i class="live" aria-hidden="true"></i>Live preview</span></div>
+      <div class="hero-scene" aria-hidden="true">
+        <canvas id="hero-scene"></canvas>
+        <div class="scene-labels"></div>
+        <div class="scene-fallback"><span>API</span><i>→</i><span>Retrieval</span><i>→</i><span>Model</span><i>→</i><span>Guardrails</span></div>
+      </div>
+      <a class="scene-cta" href="https://learn.digitalyogi.tech/courses/ai-system-design/why-ai-breaks-design"><span>Lesson 1: follow one request through an AI system</span><span aria-hidden="true">→</span></a>
+    </div>
+  </div>
 
   <div class="topic-strip">
     <div class="wrap mono"><span>System design</span><span>Low-level design</span><span>DSA</span><span>AI system design</span><span>Spring AI</span><span>Spring Boot</span><span>Java</span></div>
@@ -224,7 +226,7 @@ layout: brand
       </div>
       <div class="topics-card">
         <p class="mono muted">Learned with us</p>
-        <p style="margin-top:12px;font-size:28px;font-weight:800;letter-spacing:-0.04em">15,000+ <span style="display:block;margin-top:6px;font-size:13px;font-weight:500;letter-spacing:0;color:rgba(255,253,247,.6)">developers across our Spring Boot and RxJava courses</span></p>
+        <p class="big-number">15,000+ <span>developers across our Spring Boot and RxJava courses</span></p>
       </div>
     </aside>
   </div>

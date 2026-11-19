@@ -1,12 +1,27 @@
 /* DigitalYogi — header, mobile menu, reveals, and the lazy Three.js hero. */
-const header = document.querySelector('.site-header')
 const menuButton = document.querySelector('.menu-button')
 const mobileMenu = document.querySelector('#mobile-menu')
 
-/* ---------- header ---------- */
-const setHeader = () => header?.classList.toggle('is-solid', window.scrollY > 24)
-setHeader()
-window.addEventListener('scroll', setHeader, { passive: true })
+/* ---------- light / dark theme (same key and behaviour as Learn and KB) ---------- */
+const toggle = document.querySelector('.theme-toggle')
+if (toggle) {
+  const system = window.matchMedia('(prefers-color-scheme: dark)')
+  const current = () => document.documentElement.dataset.theme || (system.matches ? 'dark' : 'light')
+  const update = () => {
+    const next = current() === 'dark' ? 'light' : 'dark'
+    toggle.setAttribute('aria-label', `Switch to ${next} theme`)
+    toggle.querySelector('.theme-label').textContent = next === 'light' ? 'Light' : 'Dark'
+  }
+  toggle.hidden = false
+  update()
+  toggle.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark'
+    document.documentElement.dataset.theme = next
+    try { localStorage.setItem('digitalyogi-theme', next) } catch (e) {}
+    update()
+  })
+  system.addEventListener('change', update)
+}
 
 /* ---------- mobile menu ---------- */
 if (menuButton && mobileMenu) {
@@ -51,15 +66,6 @@ if (!reduceMotion && 'IntersectionObserver' in window && targets.length) {
   })
   setTimeout(() => targets.forEach((el) => el.classList.add('is-in')), 5000)
 }
-
-/* ---------- spotlight cards follow the pointer ---------- */
-document.querySelectorAll('.glow-card').forEach((card) => {
-  card.addEventListener('pointermove', (e) => {
-    const r = card.getBoundingClientRect()
-    card.style.setProperty('--mx', `${e.clientX - r.left}px`)
-    card.style.setProperty('--my', `${e.clientY - r.top}px`)
-  })
-})
 
 /* ---------- Three.js hero, after first paint ---------- */
 const canvas = document.querySelector('#hero-scene')

@@ -176,10 +176,10 @@ export function initHero({ canvas, hero, labelsRoot, onReady }) {
     uPointerOn: { value: 0 },
     uSize: { value: compact ? 2.6 : 2.9 },
     uPR: { value: dpr },
-    uNode: { value: new Color('#f4e7c8') },
-    uEdge: { value: new Color('#8f82ff') },
-    uDust: { value: new Color('#5b4fd6') },
-    uHot: { value: new Color('#ffb37a') },
+    uNode: { value: new Color('#ffffff') },
+    uEdge: { value: new Color('#b9b4e0') },
+    uDust: { value: new Color('#7a72d8') },
+    uHot: { value: new Color('#ffffff') },
   }
 
   const material = new ShaderMaterial({
@@ -314,29 +314,11 @@ export function initHero({ canvas, hero, labelsRoot, onReady }) {
     camera.aspect = width / height
     camera.updateProjectionMatrix()
 
+    // The scene lives in its own panel: fit the diagram to the panel width.
     const halfH = camera.position.z * Math.tan((camera.fov * Math.PI) / 360)
     const halfW = halfH * camera.aspect
-    if (width < 900) {
-      // Above the headline, fitted to the screen width.
-      const top = Math.min(340, width * 0.72) / 2 + 56
-      group.userData.scale = Math.min(0.75, (2 * halfW - 0.2) / 5.3)
-      group.position.set(0, (1 - (2 * top) / height) * halfH, 0)
-    } else {
-      // Fit the diagram into the space right of the text column.
-      // Measure the actual text (not its box) so the diagram gets every pixel it can.
-      const range = document.createRange()
-      let right = width * 0.5
-      hero.querySelectorAll('.hero-copy h1, .hero-copy .lede, .hero-copy .actions').forEach((el, idx) => {
-        range.selectNodeContents(el)
-        const r = range.getBoundingClientRect().right - rect.left
-        right = idx === 0 ? r : Math.max(right, r)
-      })
-      const left = ((right / width) * 2 - 1) * halfW + 0.35
-      const edge = halfW - 0.3
-      const span = Math.max(2.6, edge - left)
-      group.userData.scale = Math.min(1.05, span / 5.3)
-      group.position.set((left + edge) / 2, 0.05, 0)
-    }
+    group.userData.scale = Math.min(1.15, (2 * halfW - 0.3) / 4.9, (2 * halfH - 1.3) / 3.2)
+    group.position.set(0, 0.22, 0)
   }
 
   const heroProgress = () =>
@@ -389,7 +371,7 @@ export function initHero({ canvas, hero, labelsRoot, onReady }) {
         const x = (v.x * 0.5 + 0.5) * width
         const y = (-v.y * 0.5 + 0.5) * height
         const o = Math.max(0, Math.min(1, (morph - 0.7) * 4)) * leaving
-        labels[n].style.transform = `translate3d(${x.toFixed(1)}px, ${(y + 46 * s).toFixed(1)}px, 0) translate(-50%, 0)`
+        labels[n].style.transform = `translate3d(${x.toFixed(1)}px, ${(y + 40 * s).toFixed(1)}px, 0) translate(-50%, 0)`
         labels[n].style.opacity = o.toFixed(3)
         labels[n].classList.toggle('is-hot', flash > 0.5)
       }
@@ -421,9 +403,13 @@ export function initHero({ canvas, hero, labelsRoot, onReady }) {
 
   /* ---------- listeners ---------- */
   const onPointer = (e) => {
-    pointerNdc.tx = (e.clientX / window.innerWidth) * 2 - 1
-    pointerNdc.ty = -((e.clientY / window.innerHeight) * 2 - 1)
-    pointerNdc.ton = e.pointerType === 'touch' ? 0 : 1
+    const r = canvas.getBoundingClientRect()
+    const x = (e.clientX - r.left) / r.width
+    const y = (e.clientY - r.top) / r.height
+    const inside = x >= -0.1 && x <= 1.1 && y >= -0.1 && y <= 1.1
+    pointerNdc.tx = Math.max(-1.2, Math.min(1.2, x * 2 - 1))
+    pointerNdc.ty = Math.max(-1.2, Math.min(1.2, -(y * 2 - 1)))
+    pointerNdc.ton = e.pointerType === 'touch' || !inside ? 0 : 1
   }
   const onLeave = () => (pointerNdc.ton = 0)
   let resizeTimer = 0
